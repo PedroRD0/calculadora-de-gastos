@@ -48,6 +48,21 @@ public class Projetocalculadora {
         System.out.printf("seu saldo é: %.2f \n", saldo);
         /* aqui vai aparecer somente o saldo somado
         */
+        if (saldo > 0) { 
+            float porcentagem = saldo / salario * 100;
+    System.out.printf("voce economizou %.2f%% do seu salario \n" , porcentagem);
+            // se o saldo for maior que zero aparecera a mensagem           
+            System.out.printf("seu saldo esta positivo este mes!");              
+        }
+        else if (saldo < 0) {
+            float porcentagem = saldo / salario * -100;
+    System.out.printf("voce ultrapassou %.2f%% do seu salario \n" , porcentagem);    
+            // se o saldo for menor que zero aparecera a mensagem
+            System.out.printf("seu saldo esta negativo este mes!:[ ");
+        }
         
+        else {
+            System.out.printf("voce esta no zero a zero!");
+        }
                 }
 }
