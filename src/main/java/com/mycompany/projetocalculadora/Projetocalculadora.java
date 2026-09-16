@@ -52,17 +52,30 @@ public class Projetocalculadora {
             float porcentagem = saldo / salario * 100;
     System.out.printf("voce economizou %.2f%% do seu salario \n" , porcentagem);
             // se o saldo for maior que zero aparecera a mensagem           
-            System.out.printf("seu saldo esta positivo este mes!");              
+            System.out.printf("seu saldo esta positivo este mes! \n");              
         }
         else if (saldo < 0) {
             float porcentagem = saldo / salario * -100;
     System.out.printf("voce ultrapassou %.2f%% do seu salario \n" , porcentagem);    
             // se o saldo for menor que zero aparecera a mensagem
-            System.out.printf("seu saldo esta negativo este mes!:[ ");
+            System.out.printf("seu saldo esta negativo este mes \n:[ ");
         }
         
         else {
-            System.out.printf("voce esta no zero a zero!");
+            System.out.printf("voce esta no zero a zero! \n");           
         }
-                }
+        
+        if (aluguel >= lazer && aluguel >= estudo && aluguel >= alimentacao ) {
+        System.out.printf("seu maior gasto foi aluguel: %.2f \n " , aluguel);
+    }
+  else if(alimentacao >= aluguel && alimentacao >= estudo && alimentacao >= lazer){
+      System.out.printf("seu maior gasto foi alimentacao: %.2f" , alimentacao); 
+   }
+  else if (lazer >= aluguel && lazer >= alimentacao && lazer >= estudo) {
+       System.out.printf("seu maior gasto foi lazer: %.2f" , lazer);
+   }
+  else if (estudo >= aluguel && estudo >= alimentacao && estudo >= lazer ){
+       System.out.printf("seu maior gasto foi estudo: %.2f" , estudo);
+   }
+    }
 }
