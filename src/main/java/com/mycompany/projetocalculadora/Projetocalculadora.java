@@ -20,32 +20,53 @@ public class Projetocalculadora {
         
         System.out.print("Digite seu salario: ");
         float salario = teclado.nextFloat();
+        
+                while (salario <0){
+            System.out.print("salario invalido! digite novamente.");
+            salario = teclado.nextFloat();
+        }
          
         System.out.print("Digite seu aluguel: ");
         float aluguel = teclado.nextFloat();
         
+          while (aluguel <0){
+            System.out.print("valor invalido! digite novamente.");
+            aluguel = teclado.nextFloat();
+          }
         System.out.print("Digite seu gasto com alimentacao: ");
         float alimentacao = teclado.nextFloat();
         
+          while (alimentacao <0){
+            System.out.print("valor invalido! digite novamente.");
+            alimentacao = teclado.nextFloat();
+          }
         System.out.print("Digite seu gasto com estudo: ");
         float estudo = teclado.nextFloat();
         
+          while (estudo <0){
+            System.out.print("valor invalido! digite novamente.");
+            estudo = teclado.nextFloat();
+          }
         System.out.print("Digite seu gasto com lazer: ");
         float lazer = teclado.nextFloat();
-              
+        
+          while (lazer <0){
+            System.out.print("valor invalido! digite novamente.");
+            lazer = teclado.nextFloat();
+          }       
         float totalGastos = aluguel + alimentacao + estudo + lazer;
         
         float saldo = salario - totalGastos;
-        
+            System.out.println("=========== RESUMO FINANCEIRO ==========");
         System.out.printf("olá %s \n", nome);
         
-         System.out.printf("seu salario: %.2f \n", salario);
+         System.out.printf("seu salario: R$ %.2f \n", salario);
         
-        System.out.printf("seu gasto foi de: %.2f \n", totalGastos);
+        System.out.printf("gasto total: R$ %.2f \n", totalGastos);
         /*neste printf é para entregar o saldo gasto para melhor controle do 
         usuario
         */
-        System.out.printf("seu saldo é: %.2f \n", saldo);
+        System.out.printf("saldo disponivel: R$ %.2f \n", saldo);
         /* aqui vai aparecer somente o saldo somado
         */
         if (saldo > 0) { 
@@ -66,16 +87,18 @@ public class Projetocalculadora {
         }
         
         if (aluguel >= lazer && aluguel >= estudo && aluguel >= alimentacao ) {
-        System.out.printf("seu maior gasto foi aluguel: %.2f \n " , aluguel);
+        System.out.printf("seu maior gasto foi aluguel: R$ %.2f \n " , aluguel);
     }
   else if(alimentacao >= aluguel && alimentacao >= estudo && alimentacao >= lazer){
-      System.out.printf("seu maior gasto foi alimentacao: %.2f" , alimentacao); 
+      System.out.printf("seu maior gasto foi alimentacao: R$ %.2f \n" , alimentacao); 
    }
   else if (lazer >= aluguel && lazer >= alimentacao && lazer >= estudo) {
-       System.out.printf("seu maior gasto foi lazer: %.2f" , lazer);
+       System.out.printf("seu maior gasto foi lazer: R$ %.2f \n" , lazer);
    }
   else if (estudo >= aluguel && estudo >= alimentacao && estudo >= lazer ){
-       System.out.printf("seu maior gasto foi estudo: %.2f" , estudo);
+       System.out.printf("seu maior gasto foi estudo: R$ %.2f \n" , estudo);
    }
+        System.out.println("=====================================");
+
     }
 }
